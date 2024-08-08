@@ -6,8 +6,19 @@
   "scripts": {
     "play": "node server.js"
   },
-  "keywords": [],
-  "author": "",
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "server.js" 
+      }
+    ],
+  "author": "farizsansms@gmail.com",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
